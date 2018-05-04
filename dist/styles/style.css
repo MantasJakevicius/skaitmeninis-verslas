@@ -1,0 +1,358 @@
+@font-face {
+    font-family: digital-7;
+    src: url(../fonts/digital-7a.ttf);
+    font-weight: 100;
+}
+
+body, html, .container, #app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container, .navbar, .navbar-brand, .navbar-brand a, .langs {
+  display: grid;
+}
+
+.container {
+  grid-template-rows: 0fr auto 0fr;
+}
+
+body {
+  background: radial-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)), url("../images/background.png") no-repeat center center;
+}
+
+/*  NAVBAR STYLES  */
+header {
+  color: #fff;
+  background-color: #333333;
+  display: grid;
+  width: 100%;
+}
+
+.navbar {
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  width: 95%;
+  justify-self: center;
+  padding: 15px 0 !important;
+}
+
+.navbar, .navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  text-decoration: none !Important;
+  color: #fff;
+  font-family: digital-7;
+  letter-spacing: 1pt;
+  font-size: 1.5em;
+  text-shadow: 0px 0px 6px black;
+}
+
+.navbar li:nth-child(2), .navbar li:nth-child(3) {
+  justify-self: center;
+}
+
+.navbar-brand {
+  justify-content: start;
+}
+
+.navbar-brand a {
+  grid-template-columns: auto auto;
+}
+
+.navbar-brand img {
+  width: 3em;
+  height: 2.2em;
+  justify-self: end;
+  align-self: center;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.navbar-brand p {
+  align-self: end !important;
+  margin: 0;
+}
+
+.langs {
+  justify-content: end;
+}
+
+.langs-items li:not(:last-child) {
+  border-right: 1.5px #fff solid;
+  padding-right: 10px;
+}
+
+.langs-items li {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.3em;
+}
+
+/* Homepage section  */
+
+.buttons {
+  width: 95%;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  text-align: center;
+}
+
+.buttons a, .buttons button {
+  display: grid;
+  align-items: center;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 6px #000;
+  color: white;
+  text-decoration: none;
+  background: #41CBA7;
+  opacity: .9;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+
+.buttons a h2 {
+  font-family: digital-7;
+  letter-spacing: 1pt;
+  margin-top: 0;
+}
+
+.buttons a p, .smaller-buttons button, .link {
+  font-family: Helvetica Neue,sans-serif;
+  letter-spacing: 1pt;
+  font-size: 1.1em;
+  font-weight: 100;
+}
+
+.buttons a p {
+  padding: 0 20px;
+  margin: 0;
+}
+
+.smaller-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1em;
+}
+
+.link {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/*  SD Page header  */
+.design-header {
+  position: relative;
+  padding: 10px 0;
+}
+
+.design-header h2, .design-header svg {
+  text-shadow: 0 0 6px #000
+}
+
+.design-header h2 {
+  font-family: digital-7;
+  letter-spacing: 1pt;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.design-header svg {
+  font-size: 4.5em;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.design-header a {
+  color: #fff;
+}
+
+/*  SD PAGE SECTION  */
+
+.design-section {
+  width: 90%;
+  background-color: rgba(255,255,255,.4);
+  opacity: .8;
+  border-radius: 20px;
+  align-self: center;
+  justify-self: center;
+  box-shadow: 0 0 6px black;
+}
+
+.design-section ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+}
+
+.design-section ul li img {
+  width: 5em;
+  height: 4em;
+  transition: all .2s ease-in-out;
+}
+
+.design-section ul li img:hover {
+  transform: scale(1.3);
+}
+
+.design-section figure {
+  background-color: #3FBC9B;
+  border-radius: 50%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 6px black;
+  width: 5em;
+  height: 5em;
+  padding: 20px;
+  -webkit-animation-duration: 3s !important;
+}
+
+.design-section li:nth-child(2) figure {
+  -webkit-animation-delay: 1.5s!important;
+}
+
+.design-section li:nth-child(3) figure {
+  -webkit-animation-delay: 3s!important;
+}
+
+.design-section li:last-child figure {
+  -webkit-animation-delay: 4.5s!important;
+}
+
+.design-section p, .design-section a {
+  color: #fff;
+}
+
+/*  FOOTER  */
+
+footer {
+  display: grid;
+  color: #fff;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  background: linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,.8));
+  font-size: 1em;
+  font-family: digital-7;
+  letter-spacing: 1pt;
+  width: 95%;
+  justify-self: center;
+}
+
+.icon {
+  display: grid;
+  align-items: center;
+  justify-content: start;
+  grid-template-columns: auto auto;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.icon p {
+  margin-left: 10px;
+}
+
+.icon svg {
+  justify-self: end;
+  align-self: center;
+}
+
+.socials {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 30px 30px 30px;
+  grid-column-gap: 15px;
+  justify-content: center;
+}
+
+.socials svg {
+  font-size: 2em;
+}
+
+.copyright {
+  display: grid;
+  justify-content: end;
+  align-items: center;
+}
+
+.copyright span {
+  font-family: sans-serif;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-rows: auto 2fr auto;
+  }
+
+  .buttons {
+    grid-template-columns: auto auto;
+  }
+
+  header {
+    height: inherit;
+  }
+
+  footer {
+    grid-template-columns: auto;
+    grid-template-areas: "contacts social"
+                         "copyright copyright";
+  }
+
+  .contacts {
+    grid-area: contacts;
+    margin-top: 50px;
+    align-self: center;
+  }
+
+  .socials {
+    grid-area: social;
+    justify-self: end;
+  }
+
+  .copyright {
+    grid-area: copyright;
+    justify-self: center;
+  }
+
+  .navbar {
+    grid-template-columns: auto;
+    grid-template-areas: "brand langs"
+                         "about contact";
+  }
+
+  .navbar-brand {
+    grid-area: brand;
+  }
+
+  .navbar li:nth-child(2) {
+    grid-area: about;
+    justify-self: start;
+    margin-top: 30px;
+  }
+
+  .navbar li:nth-child(3) {
+    margin-top: 30px;
+    grid-area: contact;
+    justify-self: end;
+  }
+
+  .langs {
+    grid-area: langs;
+  }
+}
